@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "2c800cc5-fcd6-4540-947d-412f7e5e8a9e",
+		"name": "E-Commerce API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13545891"
+	},
+	"item": [
+		{
+			"name": "Get products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.saucedemo.com/v1/inventory.html",
+					"protocol": "https",
+					"host": [
+						"www",
+						"saucedemo",
+						"com"
+					],
+					"path": [
+						"v1",
+						"inventory.html"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "menu_button_container",
+							"disabled": true
+						},
+						{
+							"key": "class",
+							"value": "social_facebook",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Obtener lista de productos de la web Swag Lab"
+			},
+			"response": []
+		},
+		{
+			"name": "Create products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"05\",\r\n  \"name\": \"Buzo polar\",\r\n  \"price\": 25.00,\r\n  \"description\": \"nuevo producto impecable y practico\"\r\n  \r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.saucedemo.com/v1/inventory.html",
+					"protocol": "https",
+					"host": [
+						"www",
+						"saucedemo",
+						"com"
+					],
+					"path": [
+						"v1",
+						"inventory.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update products",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"mochila\",\r\n  \"price\": 31.99,\r\n  \"description\": \"\"\r\n  \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.saucedemo.com/v1/inventory-item.html?id=4",
+					"protocol": "https",
+					"host": [
+						"www",
+						"saucedemo",
+						"com"
+					],
+					"path": [
+						"v1",
+						"inventory-item.html"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete products",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.saucedemo.com/v1/inventory-item.html?id=2",
+					"protocol": "https",
+					"host": [
+						"www",
+						"saucedemo",
+						"com"
+					],
+					"path": [
+						"v1",
+						"inventory-item.html"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
