@@ -1,4 +1,4 @@
-Este proyecto contiene pruebas automatizadas de dos páginas web diferentes utilizando Java y el IDE IntelliJ IDEA. Las pruebas incluyen funcionalidades específicas como: 
+Este proyecto se llama Testselenium.java su directorio es SRC, contiene pruebas automatizadas de dos páginas web diferentes utilizando Java y el IDE IntelliJ IDEA. Las pruebas incluyen funcionalidades específicas como: 
 Hover: Simula el desplazamiento del mouse sobre un elemento específico.
 Fluent Wait: Implementa una espera dinámica para elementos que cargan de manera asincrónica.
 Loading File: Prueba la funcionalidad de carga de archivos.
