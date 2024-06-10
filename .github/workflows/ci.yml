@@ -1,0 +1,33 @@
+name: CI/CD Pipeline
+
+on:
+  # Ejecución automática cuando haya un push a la rama principal
+  push:
+    branches:
+      - main
+
+  # Ejecución manual
+  workflow_dispatch:
+
+  # Ejecución programada cada noche a las 12 AM
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: run Seleniumjava
+        run: npm test
