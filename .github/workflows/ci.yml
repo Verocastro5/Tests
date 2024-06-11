@@ -14,20 +14,23 @@ on:
     - cron: '0 0 * * *'
 
 jobs:
-  test:
+  test: 
     runs-on: windows-latest
 
     steps:
+      # Paso para hacer checkout del código fuente del repositorio
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
+      - name: Set up JDK
         uses: actions/setup-node@v2
         with:
-          node-version: '20.14'
+          distribution: 'adopt'
+          java-version: '22.0.1'
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: run Seleniumjava
-        run: npm test
+      - name: build with Maven
+        run: mvn install
+        
+    # Paso para ejecutar los tests
+      - name: Run Tests
+        run:  mvn test
