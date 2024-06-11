@@ -33,4 +33,5 @@ jobs:
         
     # Paso para ejecutar los tests
       - name: Run Tests
-        run:  mvn test
+        run:  src/test/java/Test
+        
